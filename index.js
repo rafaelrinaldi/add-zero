@@ -1,31 +1,32 @@
 (function(exports) {
 
-'use strict';
+  'use strict';
 
-function addZero(value, digits) {
-  value = value.toString();
-  digits = digits || 2;
+  function addZero(value, digits) {
+    digits = digits || 2;
 
-  var isNegative = value < 0;
+    var isNegative = Number(value) < 0;
+    var buffer = value.toString();
 
-  // Removes minus sign if number is negative
-  if(isNegative) {
-    value = value.slice(1);
+    // Strip minus sign if number is negative
+    if(isNegative) {
+      buffer = buffer.slice(1);
+    }
+
+    if(buffer.length < digits) {
+      buffer = new Array(digits).join('0') + buffer;
+    }
+
+    // Adds back minus sign if needed
+    return (isNegative ? '-' : '') + buffer;
   }
 
-  if(value.length < digits) {
-    return (isNegative ? '-' : '') + new Array(digits).join('0') + value;
+  if(typeof define === 'function' && define.amd) {
+    define(function() { return addZero; });
+  } else if(typeof module !== 'undefined' && module.exports) {
+    module.exports = addZero;
+  } else {
+    exports.addZero = addZero;
   }
-
-  return value;
-}
-
-if(typeof define === 'function' && define.amd) {
-  define(function() { return addZero; });
-} else if(typeof module !== 'undefined' && module.exports) {
-  module.exports = addZero;
-} else {
-  exports.addZero = addZero;
-}
 
 })(this);
