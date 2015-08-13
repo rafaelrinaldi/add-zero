@@ -2,8 +2,15 @@
 
 'use strict';
 
+var ZERO = '0';
+
 function addZero(value, digits) {
+  value = value.toString();
   digits = digits || 2;
+
+  if(value.length < digits) {
+    return new Array(digits).join(ZERO) + value;
+  }
 
   return value;
 }
