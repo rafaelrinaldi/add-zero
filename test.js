@@ -3,15 +3,6 @@
 var addZero = require('./');
 var test = require('tape');
 
-// console.log(addZero(5), '05');
-// console.log(addZero(10), '10');
-// console.log(addZero(5, 3), '005');
-// console.log(addZero(100, 3), '100');
-// console.log(addZero(0), '00');
-// console.log(addZero(-5), '-05');
-// console.log(addZero(-10), '-10');
-// console.log(addZero(-5, 3), '-005');
-
 test('add zero', function(t) {
   t.deepEqual(addZero(5), '05', 'default decimal places should be 2');
   t.deepEqual(addZero(10), '10', 'only add zero if not enough decimal places');
