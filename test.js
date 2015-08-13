@@ -16,3 +16,7 @@ test('add zero', function(t) {
   t.end();
 });
 
+test('edge cases', function(t) {
+  t.deepEqual(addZero('25', 3), '025', 'should work if value is a string');
+  t.end();
+});
