@@ -18,5 +18,6 @@ test('add zero', function(t) {
 
 test('edge cases', function(t) {
   t.deepEqual(addZero('25', 3), '025', 'should work if value is a string');
+  t.deepEqual(addZero(5, 20), '00000000000000000005', 'boring long number should work');
   t.end();
 });

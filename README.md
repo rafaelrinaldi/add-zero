@@ -35,7 +35,7 @@ addZero(-5, 3); // -005
 
 #### `value`
 
-Type: `number` or `string`  
+Type: `number` _(integer)_ or `string`  
 
 Value in which a leading zero should be added to.
 
