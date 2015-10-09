@@ -1,4 +1,4 @@
-# add-zero [![Build Status](https://travis-ci.org/rafaelrinaldi/add-zero.svg?branch=master)](https://travis-ci.org/rafaelrinaldi/add-zero)
+# add-zero [![Build Status](https://semaphoreci.com/api/v1/projects/f2401791-7ad2-4e03-907e-6fa543063669/565398/badge.svg)](https://semaphoreci.com/rafaelrinaldi/add-zero)
 
 > Add a leading zero to a number.
 
