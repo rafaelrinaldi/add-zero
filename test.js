@@ -1,6 +1,6 @@
 'use strict';
 
-var addZero = require('./');
+var addZero = require('./dist');
 var test = require('tape');
 
 test('add zero', function(t) {
