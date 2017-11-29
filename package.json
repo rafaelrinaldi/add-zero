@@ -2,8 +2,11 @@
   "name": "add-zero",
   "version": "1.0.0",
   "description": "Add a leading zero to a number.",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
+    "prepare": "tsc",
+    "pretest": "tsc",
     "test": "tape test.js"
   },
   "repository": {
@@ -27,6 +30,8 @@
   },
   "homepage": "https://github.com/rafaelrinaldi/add-zero#readme",
   "devDependencies": {
-    "tape": "^4.1.0"
+    "tape": "^4.1.0",
+    "@types/node": "^8.0.53",
+    "typescript": "^2.6.2"
   }
 }
